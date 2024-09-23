@@ -12,29 +12,17 @@ body {
   width: 100%;
 }
 
-.minicircle {
-  height: 10px;
-  width: 10px;
-  background-color: #000;
-  position: fixed;
-  z-index: 1001;
-  border-radius: 50%;
-  pointer-events: none;
-}
-
 .cursor {
   height: 30px;
   width: 30px;
   pointer-events: none;
-  position: fixed;
+  position: absolute;
   border-radius: 50%;
   border: 1.5px solid #000;
-  z-index: 1001;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  z-index: 999999;
   transition: background-image ease 0.5s;
   background-size: cover;
+  background-position: center;
 }
 
 .loader {
@@ -65,9 +53,6 @@ body {
   transform: translateY(100%);
   font-size: 8vw;
   font-family: moranga;
-  /* position: relative; */
-  /* z-index: 10000; */
-  /* mix-blend-mode: difference; */
 }
 
 .icon > i {
@@ -81,7 +66,7 @@ body {
 .main {
   height: 100vh;
   width: 100%;
-  background-color: #D4D7D2;
+  background-color: #d4d7d2;
   position: relative;
 }
 .main .nav {
@@ -134,43 +119,6 @@ body {
   margin-bottom: 2vw;
 }
 
-/* .page2>.box:has(.elem:hover) elem:not(:hover){
-    background-color: red; */
-/* } */
-.page3 {
-  height: 100vh;
-  width: 100%;
-  position: relative;
-  background-color: #000 !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-.page3 .box {
-  height: 400px;
-  width: 400px;
-  border-radius: 30px;
-  background-color: #fff;
-  overflow: hidden;
-}
-
-.box > img {
-  height: 100%;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  filter: grayscale(1);
-  transition: scale ease-out .3s, filter ease-in-out .3s;
-}
-
-.box:hover img {
-  scale: 1.15;
-  filter: grayscale(0);
-}
-
 .page4 {
   height: 100vh;
   width: 100%;
@@ -188,7 +136,7 @@ body {
 .page4 .overlay {
   height: 100%;
   width: 100%;
-  background-color: #B995F8;
+  background-color: #b995f8;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -199,7 +147,6 @@ body {
 .overlay > .up {
   width: -moz-fit-content;
   width: fit-content;
-  /* background-color: blue; */
   overflow: hidden;
 }
 
@@ -214,4 +161,4 @@ body {
 
 .overlay:hover .up > h3 {
   transform: translateY(0);
-}/*# sourceMappingURL=style.css.map */
+}
